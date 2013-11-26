@@ -2,7 +2,6 @@ package com.acme.servlet.time;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -43,7 +42,8 @@ public class BreakTimeServlet extends BaseServlet {
             if ( nextBreak.equals(highlite)) {
                 response.getWriter().println("<li style='background: green;'>" + nextBreak  + "</li>");
             } else {
-                response.getWriter().println("<li>" + nextBreak  + "</li>");                
+                response.getWriter().println("<li>" + nextBreak  + ""
+                        + "&nbsp;<a href='delete?break="+ nextBreak +"'>x</a></li>");                
             }
         }
         

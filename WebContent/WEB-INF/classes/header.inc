@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>Jumbotron Template for Bootstrap</title>
+    <title>Break Time Webapp</title>
 
     <!-- Bootstrap core CSS -->
     <link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet">
@@ -37,7 +37,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">BreakTime</a>
+          <a class="navbar-brand" href="home">BreakTime</a>
         </div>
         <div class="navbar-collapse collapse">
         

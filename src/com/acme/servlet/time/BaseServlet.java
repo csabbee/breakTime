@@ -6,13 +6,11 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.TreeSet;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.catalina.loader.StandardClassLoader;
 import org.apache.catalina.loader.WebappClassLoader;
 
 public abstract class BaseServlet extends HttpServlet {
@@ -41,7 +39,7 @@ public abstract class BaseServlet extends HttpServlet {
         
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(stream))) {
             String line;
-
+            
             while ( (line = reader.readLine()) != null) {
                 response.getWriter().println(line);
             }
@@ -52,8 +50,7 @@ public abstract class BaseServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html");
-
+        response.setContentType("text/html; UTF-8");
         resourceToResponse(response, "header.inc");
         
         super.service(request, response);

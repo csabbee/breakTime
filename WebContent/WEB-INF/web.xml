@@ -9,6 +9,10 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <context-param>
+    <param-name>defaultBreaks</param-name>
+    <param-value>10:45,14:45,17:15</param-value>
+  </context-param>
   <servlet>
     <servlet-name>AmCoffe</servlet-name>
     <servlet-class>com.acme.servlet.BreakServlet</servlet-class>
@@ -103,12 +107,25 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>Headerservlet</display-name>
-    <servlet-name>Headerservlet</servlet-name>
-    <servlet-class>com.acme.servlet.Headerservlet</servlet-class>
+    <display-name>HeaderServlet</display-name>
+    <servlet-name>HeaderServlet</servlet-name>
+    <servlet-class>com.acme.servlet.HeaderServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Headerservlet</servlet-name>
+    <servlet-name>HeaderServlet</servlet-name>
     <url-pattern>/header</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>com.acme.servlet.InitListener</listener-class>
+  </listener>
+  <servlet>
+    <description></description>
+    <display-name>DeleteBreakServlet</display-name>
+    <servlet-name>DeleteBreakServlet</servlet-name>
+    <servlet-class>com.acme.servlet.DeleteBreakServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteBreakServlet</servlet-name>
+    <url-pattern>/delete/*</url-pattern>
   </servlet-mapping>
 </web-app>
