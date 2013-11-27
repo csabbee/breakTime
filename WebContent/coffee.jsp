@@ -19,7 +19,7 @@ TreeSet<String> breakTimes = (TreeSet<String>) application.getAttribute("breakTi
 %>
 
   <h1>Coffee Break</h1>
-
+  <jsp:useBean id="now" class="java.util.Date"/>
 <!-- asdasdasd -->
 <%-- asdasdasdasdqqwqcqe --%>
   minutes left 'till coffee break :<%= getMinutes()%>
