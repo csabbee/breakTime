@@ -43,7 +43,7 @@
         </div>
         <div class="navbar-collapse collapse">
         
-           <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav">
       <li><a href="nextBreak">next break</a></li>
       <li><a href="breaktime.jsp">breaks</a></li>
       <li><a href="users.jsp">users</a></li>

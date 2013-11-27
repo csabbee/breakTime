@@ -1,4 +1,3 @@
-<%@include file="/WEB-INF/classes/header.inc" %>
 <%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
 <%@page import="java.util.TreeSet"%>
 <%@page import="com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException"%>
@@ -31,5 +30,3 @@ TreeSet<String> breakTimes = (TreeSet<String>) application.getAttribute("breakTi
     <li><%=next %></li>
   <%} %>  
   </ul>
-
-<%@include file="/WEB-INF/classes/footer.inc"%>
