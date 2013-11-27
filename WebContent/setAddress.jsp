@@ -1,28 +1,16 @@
-<%@page import="com.acme.domain.Address"%>
-<%
- Address delivery = (Address)session.getAttribute("delivery");
- if(delivery == null){
-     delivery = new Address();
-     session.setAttribute("delivery", delivery);
- }
- String zip = request.getParameter("zip"); 
- if(zip != null){
-     delivery.setZip(zip);
- }
- String city = request.getParameter("city");
-         if(city != null){
-             delivery.setCity(city);
- }
- String street = request.getParameter("street"); 
-         if(street != null){
-             delivery.setStreet(street);
- }
-%>
+<jsp:useBean id="delivery" class="com.acme.domain.Address" scope="session"/>
+<jsp:setProperty name="delivery" property="zip" param="zip"/>
+<jsp:setProperty name="delivery" property="city" param="city"/>
+<jsp:setProperty name="delivery" property="street" param="street"/>
+
 
 <h2>Address</h2>
-<div class="alert alert-success">
-	delivery: <%= delivery%>
+<div class="alert alert-success span4">
+  <jsp:getProperty property="zip" name="delivery"/>
+  <jsp:getProperty property="city" name="delivery"/>
+  <jsp:getProperty property="street" name="delivery"/>
 </div>
+
 <form class="form-horizontal">
   <div class="control-group">
     <label class="control-label" for="inputCity">City</label>
