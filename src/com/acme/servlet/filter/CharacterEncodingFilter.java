@@ -33,6 +33,7 @@ public class CharacterEncodingFilter implements Filter {
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+	    response.setContentType("text/html");
 	    response.setCharacterEncoding("UTF-8");
 	    request.setCharacterEncoding("UTF-8");
 	    
