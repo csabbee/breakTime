@@ -1,3 +1,4 @@
+<%@include file="/WEB-INF/classes/header.inc" %>
 <%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
 <%@page import="java.util.TreeSet"%>
 <%@page import="com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException"%>
@@ -17,12 +18,7 @@ long getMinutes() throws Exception{
 <%
 TreeSet<String> breakTimes = (TreeSet<String>) application.getAttribute("breakTimes");
 %>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
+
   <h1>Coffee Break</h1>
 
 <!-- asdasdasd -->
@@ -35,5 +31,5 @@ TreeSet<String> breakTimes = (TreeSet<String>) application.getAttribute("breakTi
     <li><%=next %></li>
   <%} %>  
   </ul>
-</body>
-</html>
+
+<%@include file="/WEB-INF/classes/footer.inc"%>
