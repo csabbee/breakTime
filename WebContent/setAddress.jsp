@@ -1,7 +1,12 @@
+<%@page errorPage="errorHandling.jsp"%>
 <jsp:useBean id="delivery" class="com.acme.domain.Address" scope="session"/>
 <jsp:setProperty name="delivery" property="*"/>
 
-
+<%
+if("xxx".equalsIgnoreCase(delivery.getCity())){
+    throw new RuntimeException("Bad city");
+}
+%>
 <h2>Address</h2>
 <div class="bs-docs-example">
   <jsp:getProperty property="zip" name="delivery"/>
