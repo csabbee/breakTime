@@ -1,11 +1,9 @@
 <jsp:useBean id="delivery" class="com.acme.domain.Address" scope="session"/>
-<jsp:setProperty name="delivery" property="zip" param="zip"/>
-<jsp:setProperty name="delivery" property="city" param="city"/>
-<jsp:setProperty name="delivery" property="street" param="street"/>
+<jsp:setProperty name="delivery" property="*"/>
 
 
 <h2>Address</h2>
-<div class="alert alert-success span4">
+<div class="bs-docs-example">
   <jsp:getProperty property="zip" name="delivery"/>
   <jsp:getProperty property="city" name="delivery"/>
   <jsp:getProperty property="street" name="delivery"/>

@@ -1,8 +1,8 @@
 <%@page import="java.util.Set"%>
 <%@page import="java.util.TreeSet"%>
+<jsp:useBean id="breakTimes" class="java.util.TreeSet" scope="application"/>
 
 <%
-Set<String> breakTimes = (Set<String>) application.getAttribute("breakTimes");
 if("post".equalsIgnoreCase(request.getMethod())){
     String newBreak = request.getParameter("break");
     breakTimes.add(newBreak);
@@ -17,16 +17,15 @@ if("post".equalsIgnoreCase(request.getMethod())){
 			<th>Action</th>
 		</tr>
 	</thead>
-	<%for(String next : breakTimes){%>
+	<%for(Object next : breakTimes){%>
 	<tr>
 		<td><%=next %></td>
-		<td><a href='delete?break=<%= next %>'>X</a></td>
+		<td><a class="btn btn-small" href='delete?break=<%= next %>'><i class="icon-trash"></i></a></td>
 	</tr>
 	<%} %>
 </table>
 
 <h2>Add new break time</h2>
 <form action="breaktime.jsp" method="post">
-	<input type="text" name="break"> <input type="submit"
-		value="add">
+	<input type="text" name="break"> <input type="submit" value="add">
 </form>
