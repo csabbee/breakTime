@@ -1,0 +1,6 @@
+  <div class="control-group">
+    <label class="control-label" for="input<%= request.getParameter("fieldName") %>"> <%= request.getParameter("fieldName") %></label>
+    <div class="controls">
+      <input type="text" id="input<%= request.getParameter("fieldName") %>" name="<%= request.getParameter("fieldName") %>" placeholder="<%= request.getParameter("fieldName") %>">
+    </div>
+  </div>

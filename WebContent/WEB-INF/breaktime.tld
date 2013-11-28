@@ -13,5 +13,20 @@
       <name>field</name>
 	  <tag-class>com.acme.tags.FieldTag</tag-class>
 	  <body-content>empty</body-content>
+	  <attribute>
+	    <name>name</name>
+	    <type>java.lang.String</type>
+	  </attribute>
+	</tag>
+	<tag>
+	  <description>Lists the session attributes</description>
+	  <display-name>attribute</display-name>
+	  <name>attribute</name>
+	  <tag-class>com.acme.tags.DebugTag</tag-class>
+	  <body-content>empty</body-content>
+	  <attribute>
+	    <name>attributes</name>
+	    <type>java.util.List</type>
+	  </attribute>
 	</tag>
 </taglib>
