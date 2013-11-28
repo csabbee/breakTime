@@ -8,10 +8,18 @@ if("xxx".equalsIgnoreCase(delivery.getCity())){
 }
 %>
 <h2>Address</h2>
-<div class="bs-docs-example">
-  <jsp:getProperty property="zip" name="delivery"/>
-  <jsp:getProperty property="city" name="delivery"/>
-  <jsp:getProperty property="street" name="delivery"/>
+<div>
+  <table class="table">
+  <tbody>
+    <tr class="info">
+      <td>
+        <jsp:getProperty property="zip" name="delivery"/>
+        <jsp:getProperty property="city" name="delivery"/>
+        <jsp:getProperty property="street" name="delivery"/>
+      </td>
+    </tr>
+  </tbody>
+  </table>
 </div>
 
 <form class="form-horizontal">

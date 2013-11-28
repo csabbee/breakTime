@@ -14,10 +14,7 @@
 	<!-- slate,united,yeti,simplex,readable,amelia,cerulean,cosmo,cyborg,flatly,journal  -->
     <link href="http://netdna.bootstrapcdn.com/bootswatch/3.0.2/slate/bootstrap.min.css" rel="stylesheet">
     <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" rel="stylesheet">
-    
-    <!-- Bootstrap docs css -->
-    <link href="http://getbootstrap.com/2.3.2/assets/css/docs.css" rel="stylesheet">
-    
+
     <!-- Custom styles for this template -->
     <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
 
@@ -32,26 +29,17 @@
   </head>
 
   <body>
-
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="home">BreakTime</a>
-        </div>
-        <div class="navbar-collapse collapse">
-        
-    <ul class="nav navbar-nav">
-      <li><a href="nextBreak">next break</a></li>
-      <li><a href="breaktime.jsp">breaks</a></li>
-      <li><a href="users.jsp">users</a></li>
-      <li><a href="setAddress.jsp">address</a></li>
-    </ul>
+      <div class="container"><div class="navbar-collapse collapse">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="home">BreakTime</a>
+          </div>        
+          <ul class="nav navbar-nav">
+            <li><a href="nextBreak">next break</a></li>
+            <li><a href="breaktime.jsp">breaks</a></li>
+            <li><a href="users.jsp">users</a></li>
+            <li><a href="setAddress.jsp">address</a></li>
+          </ul>
           <form action="login" method="post" class="navbar-form navbar-right">
             <div class="form-group">
               <input type="text" name="username" placeholder="username" class="form-control">

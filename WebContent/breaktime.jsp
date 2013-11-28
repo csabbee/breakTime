@@ -27,5 +27,6 @@ if("post".equalsIgnoreCase(request.getMethod())){
 
 <h2>Add new break time</h2>
 <form action="breaktime.jsp" method="post">
-	<input type="text" name="break"> <input type="submit" value="add">
+	<input class="input-large" type="text" name="break">
+	<button type="submit" class="btn">add</button>
 </form>
