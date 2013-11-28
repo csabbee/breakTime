@@ -1,5 +1,4 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
 <ul>
 	<c:forEach begin="2" end="10" step="2" var="number" varStatus="index">
 		<li>count=${index.count} index=${index.index} number=${number}</li>
@@ -11,5 +10,4 @@
 </ul>
 <c:url value="secret/topsecret.jsp" var="secretUrl"></c:url>
 <a href="${secretUrl}">secret</a>
-
 

@@ -8,7 +8,6 @@ if("post".equalsIgnoreCase(request.getMethod())){
     breakTimes.add(newBreak);
 }
 %>
-
 <h2>List of breaks</h2>
 <table class="table table-striped">
 	<thead>
