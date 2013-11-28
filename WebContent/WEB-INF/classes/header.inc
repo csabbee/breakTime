@@ -1,4 +1,6 @@
-<%@taglib uri="/WEB-INF/breaktime.tld"  prefix="break"%>
+<%@ taglib uri="/WEB-INF/breaktime.tld"  prefix="break"%>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="b" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
