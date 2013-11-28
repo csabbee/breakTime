@@ -9,14 +9,7 @@
 		<li>${index.count}.: ${number}</li>
 	</c:forEach>
 </ul>
-<h2>version 0</h2>
-<hr/>
-<%=request.getParameter("param") %>
-<h2>version 1</h2>
-<hr/>
-${param.param}
-<h2>version 2</h2>
-<hr/>
-<c:out value="${param.param}"></c:out>
+<c:url value="secret/topsecret.jsp" var="secretUrl"></c:url>
+<a href="${secretUrl}">secret</a>
 
 
