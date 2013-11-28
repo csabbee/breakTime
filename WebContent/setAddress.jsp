@@ -19,10 +19,10 @@
   </table>
 </div>
 <div>
-<form class="form-horizontal">
-  <b:field name="city"/>
-  <b:field name="street"/>
-  <b:field name="zip"/>
-  <b:submit caption="Submit"/>
-</form>
+  <form class="form-horizontal">
+    <b:field name="city"/>
+    <b:field name="street"/>
+    <b:field name="zip"/>
+    <b:submit caption="Submit"/>
+  </form>
 </div>
