@@ -1,6 +1,9 @@
 <%@ taglib uri="/WEB-INF/breaktime.tld"  prefix="break"%>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="b" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+
+<c:url value="/" var="baseUrl"></c:url>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +12,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
     <title>Break Time Webapp</title>
     
@@ -38,10 +40,10 @@
             <a class="navbar-brand" href="home">BreakTime</a>
           </div>        
           <ul class="nav navbar-nav">
-            <li><a href="nextBreak">next break</a></li>
-            <li><a href="breaktime.jsp">breaks</a></li>
-            <li><a href="users.jsp">users</a></li>
-            <li><a href="setAddress.jsp">address</a></li>
+            <li><a href="${baseUrl}nextBreak">next break</a></li>
+            <li><a href="${baseUrl}breaktime.jsp">breaks</a></li>
+            <li><a href="${baseUrl}users.jsp">users</a></li>
+            <li><a href="${baseUrl}setAddress.jsp">address</a></li>
           </ul>
           <form action="login" method="post" class="navbar-form navbar-right">
             <div class="form-group">

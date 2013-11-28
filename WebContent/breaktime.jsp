@@ -17,12 +17,15 @@ if("post".equalsIgnoreCase(request.getMethod())){
 			<th>Action</th>
 		</tr>
 	</thead>
-	<%for(Object next : breakTimes){%>
+	<c:forEach items="${breakTimes}" var="next">
 	<tr>
-		<td><%=next %></td>
-		<td><a class="btn btn-small" href='delete?break=<%= next %>'><i class="icon-trash"></i></a></td>
+		<td>${next }</td>
+		<c:url var="deleteUrl">
+		<c:param name="break" value="${next}"></c:param>
+		</c:url>
+		<td><a class="btn btn-small" href="${deleteUrl}"><i class="icon-trash"></i></a></td>
 	</tr>
-	<%} %>
+	</c:forEach>
 </table>
 
 <h2>Add new break time</h2>

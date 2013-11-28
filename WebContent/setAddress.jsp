@@ -11,7 +11,7 @@
     <tr class="info">
       <td>
         ${delivery.zip}<br/>
-        ${delivery.city}<br/>
+        ${fn:toUpperCase(delivery.city)}<br/>
         ${delivery.street}<br/>
       </td>
     </tr>
