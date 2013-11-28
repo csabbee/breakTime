@@ -40,7 +40,6 @@
             <a class="navbar-brand" href="home">BreakTime</a>
           </div>        
           <ul class="nav navbar-nav">
-            <li><a href="${baseUrl}nextBreak">next break</a></li>
             <li><a href="${baseUrl}breaktime.jsp">breaks</a></li>
             <li><a href="${baseUrl}users.jsp">users</a></li>
             <li><a href="${baseUrl}setAddress.jsp">address</a></li>

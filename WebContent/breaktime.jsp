@@ -19,11 +19,11 @@ if("post".equalsIgnoreCase(request.getMethod())){
 	</thead>
 	<c:forEach items="${breakTimes}" var="next">
 	<tr>
-		<td>${next }</td>
-		<c:url var="deleteUrl">
-		<c:param name="break" value="${next}"></c:param>
+		<td>${next}</td>
+		<c:url value="delete" var="deleteUrl">
+		    <c:param name="break" value="${next}"></c:param>
 		</c:url>
-		<td><a class="btn btn-small" href="${deleteUrl}"><i class="icon-trash"></i></a></td>
+		<td><a class="btn btn-small" href='${deleteUrl}'><i class="icon-trash"></i></a></td>
 	</tr>
 	</c:forEach>
 </table>
